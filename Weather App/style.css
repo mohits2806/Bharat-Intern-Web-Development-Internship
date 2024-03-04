@@ -16,8 +16,8 @@ body{
 }
 
 .container{
-    width: 90%;
-    max-width: 470px;
+    width: 100%;
+    max-width: 550px;
     background: linear-gradient(135deg, gray, rgb(76, 76, 76));
     color: #fff;
     margin: 20px auto;
@@ -63,12 +63,13 @@ body{
 
 .weather-icon{
     width: 170px;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .weather h1{
     font-size: 80px;
     font-weight: 500;
+    margin: 0;
 }
 
 .weather h2{
@@ -81,7 +82,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 10px;
+    margin: 0;
 }
 
 .col{
@@ -95,8 +97,8 @@ body{
     margin-right: 10px;
 }
 
-.humidity, .wind{
-    font-size: 28px;
+.humidity, .wind, .visibility{
+    font-size: 20px;
 }
 
 .weather{
@@ -111,13 +113,33 @@ body{
     display: none;
 }
 
+footer{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease-in-out;
+}
+
+footer a:hover{
+    color: white;
+}
+
 /* Making it responsive for mobile screens */
 
 @media only screen and (max-width: 600px) {
 
     .container{
         width: 100%;
-        max-width: 320px;
+        max-width: 350px;
         margin: 20px auto;
         padding: 10px 5px;
     }
@@ -137,5 +159,32 @@ body{
         width: 40px;
         font-size: 13px;
         height: 40px;
+    }
+
+    .search_bar button img{
+        height: 20px;
+    }
+
+    .col img{
+        width: 23px;
+        margin-right: 2px;
+    }
+
+    .humidity, .wind, .visibility{
+        font-size: 18px;
+    }
+
+    .col{
+        margin: 0 2px;
+        font-size: 9px;
+    }
+
+    footer{
+        margin-left: 0;
+        position: relative;
+        bottom: 0;
+        font-weight: bold;
+        font-size: 15px;
+        text-align: center;
     }
 }
